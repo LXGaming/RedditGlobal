@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "RedditGlobal",
+    "version": "1.0.0",
+    "description": "Sets the geo_filter for Reddit if it's not already present",
+    "icons": {
+        "16": "./images/icon16.png",
+        "48": "./images/icon48.png",
+        "128": "./images/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "./images/icon16.png",
+            "24": "./images/icon24.png",
+            "32": "./images/icon32.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "author": "LX_Gaming",
+    "content_scripts": [
+        {
+            "matches": ["*://www.reddit.com/*", "*://old.reddit.com/*"],
+            "js": ["./scripts/script.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "homepage_url": "https://lxgaming.github.io/"
+}
